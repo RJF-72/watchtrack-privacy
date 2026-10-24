@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--
+REVISED October 24, 2026 to match VERIFIED Chrome Web Store console facts:
+- Permissions: storage, host permission.
+- Storage: chrome.storage.local holds the user's imported TV Time watch
+  history, ratings, and watchlist, locally on the device.
+- Host permission is used ONLY for api.themoviedb.org (TMDB): public show
+  metadata fetches; the only user-derived data sent to TMDB is the show name
+  the user searches for. Fetches from TMDB are data-only JSON (no remote code
+  is executed).
+- Pro tier: $3.99/mo or $15.99/yr, payments processed via Stripe. Listing's
+  own words: "Local backup — your data stays on your device."
+- Support email in the listing: support@watchtrack.app.
+- Not affiliated with TV Time.
+
+⚠ AMENDMENT TRIGGER (also flagged in README.md): the storage justification
+mentions data leaving the device for backup "if user enables Pro sync." This
+policy describes backups as LOCAL backups on the user's device, per the
+listing. IF Pro sync ever uploads library data off the device, this policy
+must be amended to name the destination BEFORE any console update is
+submitted.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WatchTrack — TV Time Importer &amp; Where to Watch — Privacy Policy</title>
+<style>
+  body { font-family: Georgia, "Times New Roman", serif; color: #1c1c1e; background: #fdfdfb;
+         max-width: 760px; margin: 0 auto; padding: 40px 22px 64px; line-height: 1.65; }
+  h1 { font-size: 30px; line-height: 1.25; margin: 0 0 6px; }
+  h2 { font-size: 20px; margin: 34px 0 8px; }
+  p, li { font-size: 16.5px; }
+  .meta { color: #555; font-size: 15px; margin-bottom: 28px; }
+  ul { padding-left: 22px; }
+  a { color: #0b5394; }
+  .box { background: #f2f0e9; border: 1px solid #ddd8c8; border-radius: 8px; padding: 14px 18px; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — WatchTrack (TV Time Importer &amp; Where to Watch)</h1>
+<p class="meta">
+  Operated by Redemption Road Music Group, Abilene, Texas, USA<br>
+  Effective date: October 24, 2026<br>
+  Support: <a href="mailto:support@watchtrack.app">support@watchtrack.app</a>
+</p>
+
+<p>WatchTrack — TV Time Importer &amp; Where to Watch is a browser extension
+that moves your TV show library out of TV Time and into WatchTrack, so your
+shows, watch history, ratings, and watchlist come with you — and then helps you
+track what to watch next. This policy explains, in plain language, what
+information the extension works with and what it does not do.</p>
+
+<div class="box">
+<p><strong>The short version:</strong> your library lives on your own device.
+The extension imports the TV Time export file you provide and stores your
+watch history, ratings, and watchlist locally in your browser. The only
+outside service the extension talks to for show information is TMDB, and the
+only thing it sends there is the show name you search for. If you buy
+WatchTrack Pro, your payment is processed by Stripe — we never see or store
+your card details. We do not sell your data.</p>
+</div>
+
+<h2>Data We Access, and Why</h2>
+<ul>
+  <li><strong>Your TV Time export file</strong> — a CSV or JSON file that you
+  export from TV Time and choose to import. It contains your shows, your watch
+  history (the episodes you have marked as watched), your ratings, and your
+  watchlist. The extension reads the file you provide, on your device, solely
+  to recreate your library in WatchTrack. The extension never asks for, sees,
+  or stores your TV Time password.</li>
+  <li><strong>Your WatchTrack library</strong> — the shows, watch history,
+  ratings, and watchlist created by the import, plus anything you add or mark
+  afterward, so the extension can show you your shows and keep your place.</li>
+  <li><strong>Show names you search for</strong> — when you search for a show,
+  the extension sends that show name to TMDB (The Movie Database) to fetch
+  public information about the show. This is described under "Third Parties"
+  below.</li>
+</ul>
+<p>Your library information is never used to build a profile of you, to target
+advertising, or for any purpose unrelated to importing and tracking your
+shows.</p>
+
+<h2>Permissions, and Why Each One Exists</h2>
+<ul>
+  <li><strong>storage</strong> — so the extension can save your imported watch
+  history, ratings, and watchlist on your device using Chrome's extension
+  storage.</li>
+  <li><strong>Host permission</strong> — used only to reach
+  <em>api.themoviedb.org</em> (TMDB), so the extension can fetch public show
+  metadata. The extension does not use host access for any other site.</li>
+</ul>
+
+<h2>Where Your Data Is Stored</h2>
+<p>Your imported watch history, ratings, and watchlist are stored locally on
+your device in your browser, using Chrome's built-in extension storage
+(<em>chrome.storage.local</em>). They are not uploaded to any server operated
+by us, and we cannot view them.</p>
+
+<h2>Backups</h2>
+<p>WatchTrack can create local backups of your library — backup files stored
+on your own device, under your control. As the listing says: local backup,
+your data stays on your device. Restoring a backup reads a file you provide,
+the same way the original import does.</p>
+
+<h2>WatchTrack Pro and Payments (Stripe)</h2>
+<p>WatchTrack offers an optional Pro tier ($3.99/month or $15.99/year) that
+adds unlimited tracking, automatic backups, and detailed statistics. Payments
+are processed securely by <strong>Stripe</strong>, our payment processor. When
+you subscribe, your payment details go directly to Stripe — the extension
+never receives, sees, or stores your card number or other payment details,
+and the operator receives no card data. Stripe's handling of your payment
+information is governed by Stripe's own privacy policy. What we can see is
+limited to ordinary subscription status information (such as whether a
+subscription is active) needed to switch Pro features on or off.</p>
+
+<h2>Third Parties</h2>
+<ul>
+  <li><strong>TMDB (The Movie Database)</strong> — the extension fetches
+  public show metadata from TMDB's API (api.themoviedb.org): things like show
+  titles, episode lists, and descriptions. The only user-derived data sent to
+  TMDB is the show name you type into search. These fetches are data-only —
+  the responses are information, not code, and no code from TMDB is run in
+  the extension. TMDB's use of the requests it receives is governed by TMDB's
+  own privacy policy.</li>
+  <li><strong>Stripe</strong> — payment processing for WatchTrack Pro only,
+  as described above.</li>
+  <li><strong>TV Time</strong> — a third-party service you already use, and
+  the source of the export file you import. This extension is
+  <strong>not affiliated with or endorsed by TV Time</strong>, and your use
+  of TV Time remains governed by TV Time's own terms and privacy policy.</li>
+</ul>
+<p>Other than TMDB and Stripe as described, the extension uses no third-party
+services. It contains no analytics and no advertising.</p>
+
+<h2>Data Sharing and Sale</h2>
+<p>We do not sell your information. We do not share your library, watch
+history, ratings, or watchlist with anyone. We do not transfer your
+information to data brokers, advertisers, analytics providers, or any other
+third party.</p>
+
+<h2>Data Retention</h2>
+<p>Because your library lives only in your browser's local storage, it stays
+there until you remove it: it is deleted when you uninstall the extension, and
+you can also erase it at any time by clearing the extension's data in Chrome's
+settings. Local backup files you create stay on your device until you delete
+them. We hold no copies of your library, so there is nothing on our side to
+retain or delete. Stripe retains payment records under its own policy.</p>
+
+<h2>Your Rights and Choices</h2>
+<ul>
+  <li>Importing is always your choice: nothing is read until you choose a
+  TV Time export file and run the import.</li>
+  <li>You can remove the extension at any time from Chrome's Extensions page;
+  removing it deletes its locally stored data.</li>
+  <li>You can clear the extension's stored library through Chrome's
+  site/extension data controls without uninstalling.</li>
+  <li>Questions about this policy or the extension's data practices:
+  <a href="mailto:support@watchtrack.app">support@watchtrack.app</a>.</li>
+</ul>
+
+<h2>Children's Privacy</h2>
+<p>The extension is a general-purpose utility for moving and tracking a TV
+show library. It is not directed at children under 13, and it does not
+knowingly collect information from anyone, including children.</p>
+
+<h2>Changes to This Policy</h2>
+<p>If this policy changes, the updated version will be posted at this same
+address with a new effective date. If a future version of the extension ever
+changed how it handles information in a material way — for example, if any
+feature ever sent library data off your device — that change would be
+described here before or when it takes effect.</p>
+
+<h2>Chrome Web Store User Data Policy</h2>
+<p>WatchTrack's use of information complies with the Chrome Web Store User
+Data Policy, including its Limited Use requirements: information accessed
+through Chrome's extension APIs is used only to provide the extension's
+single, user-facing purpose — importing and tracking your TV show library —
+is not transferred to third parties except as necessary to provide that
+feature (TMDB for show metadata, Stripe for Pro payments, as described
+above), is not used for advertising or credit-worthiness purposes, and is
+never read by a human at Redemption Road Music Group.</p>
+
+</body>
+</html>
